@@ -1,0 +1,72 @@
+.button
+  display inline-flex
+  align-items center
+  justify-content space-between
+  height 52px
+  padding 0 40px
+  background transparent
+  border none
+  border-radius 6px
+  text-align center
+  font-weight 600
+  white-space nowrap
+  transition all 0.2s linear
+  cursor pointer
+
+  &:hover
+    -webkit-transform scale(1.02)
+    transform scale(1.02)
+    box-shadow 0 7px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)
+
+  &:active
+    -webkit-transform scale(1)
+    transform scale(1)
+    box-shadow none
+
+  &:focus
+    outline 0
+
+  &:disabled
+    -webkit-transform scale(1)
+    transform scale(1)
+    box-shadow none
+
+  &.-small
+    height 32px
+
+  &.-fill
+    &-error
+      background #ff6473
+      color #ffffff
+
+    &-success
+      background #5cc1b3
+      color #ffffff
+
+    &-gray
+      background #757882
+      color #ffffff
+
+  &.-icon
+    &-right
+      text-align left
+      padding 0 20px
+
+      > .icon
+        margin-left 10px
+
+    &-left
+      text-align right
+      padding 0 20px
+
+      > .icon
+        margin-right 10px
+
+    &-center
+      padding 0 20px
+
+.button + .button
+  margin-left 0
+
+  @media (min-width: 600px)
+    margin-left 1em
